@@ -1,0 +1,336 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #2b2b2b;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.alt-section {
+    background: #f7f9fc;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #163a5f;
+}
+
+p {
+    color: #555;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e8edf4;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #163a5f;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1f5d9c;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(15, 35, 60, 0.75),
+            rgba(15, 35, 60, 0.75)
+        ),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80');
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.hero p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background: #d4a73b;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #c1942e;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   MISSION
+========================= */
+
+#mission p {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.05);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #163a5f;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   CHATBOT SECTION
+========================= */
+
+.chatbot-description {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#chatbot-container {
+    min-height: 600px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.08);
+
+    padding: 20px;
+}
+
+/* =========================
+   SUPPORT SECTION
+========================= */
+
+#support {
+    text-align: center;
+}
+
+#support p {
+    max-width: 800px;
+    margin: auto auto 30px;
+}
+
+.donate-btn {
+    background: #163a5f;
+    color: white;
+
+    border: none;
+
+    padding: 15px 35px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.donate-btn:hover {
+    background: #1f5d9c;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0f2340;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 0;
+}
+
+footer p {
+    color: rgba(255,255,255,0.8);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    #chatbot-container {
+        min-height: 500px;
+    }
+}
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+.hidden-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show-card {
+    opacity: 1;
+    transform: translateY(0);
+}
